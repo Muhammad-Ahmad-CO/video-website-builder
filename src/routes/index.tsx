@@ -1,24 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { SiteNav } from "@/components/site/SiteNav";
+import { Hero } from "@/components/site/Hero";
+import { Statement } from "@/components/site/Statement";
+import { About } from "@/components/site/About";
+import { Clients } from "@/components/site/Clients";
+import { Projects } from "@/components/site/Projects";
+import { Archive } from "@/components/site/Archive";
+import { Contact } from "@/components/site/Contact";
+import { useReveal, useSmoothScroll } from "@/components/site/use-reveal";
+
+const TITLE = "Michael Brown — Creative & Design Director";
+const DESCRIPTION =
+  "Portfolio of Michael Brown, creative and design director in Chicago working on brand identity, editorial, packaging and digital experiences.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useReveal();
+  useSmoothScroll();
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="min-h-screen">
+      <SiteNav />
+      <Hero />
+      <Statement />
+      <About />
+      <Clients />
+      <Projects />
+      <Archive />
+      <Contact />
+    </main>
   );
 }

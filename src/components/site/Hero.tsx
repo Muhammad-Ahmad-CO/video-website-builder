@@ -46,7 +46,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-x-0 top-[58%] z-0 hidden h-px bg-[color-mix(in_srgb,var(--theme-text)_28%,transparent)] md:block" />
 
       <div className="absolute inset-x-0 top-[58%] z-20 flex items-start justify-between px-5 pt-4 md:px-8">
-        <h1 className="display-xl max-w-[9ch] text-[7vw] md:text-[1.45vw] md:leading-[1.05]">
+        <h1 className="display-xl max-w-[9ch] text-[7vw] md:max-w-[24ch] md:text-[1.6vw] md:leading-[1.05]">
           Great work speaks
           <br className="hidden md:block" /> with purpose
         </h1>
