@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HERO_SLIDES } from "@/lib/site-data";
+import { VoxelHeader } from "./VoxelHeader";
 
 export function Hero() {
   const [i, setI] = useState(0);
@@ -11,19 +12,7 @@ export function Hero() {
 
   return (
     <section id="work" className="relative flex min-h-svh flex-col justify-center overflow-hidden">
-      {/* Oversized initials */}
-      <span
-        aria-hidden
-        className="display-tight pointer-events-none absolute -left-[0.06em] top-[8vh] select-none text-[34vw] leading-[0.72] md:top-[6vh] md:text-[26vw]"
-      >
-        M
-      </span>
-      <span
-        aria-hidden
-        className="display-tight pointer-events-none absolute -right-[0.06em] bottom-[6vh] select-none text-[34vw] leading-[0.72] md:bottom-[2vh] md:text-[26vw]"
-      >
-        B
-      </span>
+      <VoxelHeader />
 
       {/* Centre stage */}
       <div className="relative z-10 flex justify-center px-6">
@@ -46,10 +35,10 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-x-0 top-[58%] z-0 hidden h-px bg-[color-mix(in_srgb,var(--theme-text)_28%,transparent)] md:block" />
 
       <div className="absolute inset-x-0 top-[58%] z-20 flex items-start justify-between px-5 pt-4 md:px-8">
-        <h1 className="display-xl max-w-[9ch] text-[7vw] md:max-w-[24ch] md:text-[1.6vw] md:leading-[1.05]">
+        <p className="display-xl max-w-[9ch] text-[7vw] md:max-w-[24ch] md:text-[1.6vw] md:leading-[1.05]">
           Great work speaks
           <br className="hidden md:block" /> with purpose
-        </h1>
+        </p>
         <div className="mono-label relative hidden h-4 w-[22ch] overflow-hidden text-right md:block">
           {HERO_SLIDES.map((s, idx) => (
             <span

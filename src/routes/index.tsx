@@ -10,9 +10,9 @@ import { Archive } from "@/components/site/Archive";
 import { Contact } from "@/components/site/Contact";
 import { useReveal, useSmoothScroll } from "@/components/site/use-reveal";
 
-const TITLE = "Michael Brown — Creative & Design Director";
+const TITLE = "Muhammad Ahmad — Creative & Design Director";
 const DESCRIPTION =
-  "Portfolio of Michael Brown, creative and design director in Chicago working on brand identity, editorial, packaging and digital experiences.";
+  "Portfolio of Muhammad Ahmad, creative and design director in Chicago working on brand identity, editorial, packaging and digital experiences.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -33,13 +33,13 @@ export function About() {
         <div className="md:col-span-4 md:col-start-2">
           <img
             src={PORTRAIT}
-            alt="Michael Brown, creative and design director, wearing a button-down shirt"
+            alt="Muhammad Ahmad, creative and design director, wearing a button-down shirt"
             loading="lazy"
             className="duotone aspect-[4/5] w-full object-cover"
           />
         </div>
         <figcaption className="mono-label self-end opacity-70 md:col-span-4 md:col-start-8">
-          Michael Brown &mdash; Creative &amp; Design Director
+          Muhammad Ahmad &mdash; Creative &amp; Design Director
           <br />
           Chicago + Naperville
         </figcaption>
