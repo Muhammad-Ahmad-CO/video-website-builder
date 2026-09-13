@@ -242,6 +242,10 @@
     transform: none !important;
     transition: none !important;
   }
+
+  .marquee-track {
+    animation-play-state: paused;
+  }
 }
 
 .marquee-track {

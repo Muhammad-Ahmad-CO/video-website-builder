@@ -39,7 +39,7 @@ export function SiteNav() {
       <nav className="mx-auto flex items-center justify-between px-5 py-4 md:px-8">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          aria-label="Michael Brown — home"
+          aria-label="Muhammad Ahmad — home"
           className="flex items-center gap-1"
         >
           <span className="display-tight text-[1.15rem] leading-none">M</span>

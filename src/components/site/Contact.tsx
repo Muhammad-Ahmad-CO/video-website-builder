@@ -62,7 +62,7 @@ export function Contact() {
       </div>
 
       <div className="hairline mono-label flex flex-wrap items-center justify-between gap-3 px-5 py-6 opacity-70 md:px-8">
-        <span>&copy; {new Date().getFullYear()} Michael Brown</span>
+        <span>&copy; {new Date().getFullYear()} Muhammad Ahmad</span>
         <span>Creative &amp; Design Director</span>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
