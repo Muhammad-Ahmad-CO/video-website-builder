@@ -14,7 +14,7 @@ export function Clients() {
 
   return (
     <section className="px-5 pb-24 md:px-8 md:pb-36">
-      <div className="grid gap-10 pb-16 md:grid-cols-12 md:gap-8 md:pb-28">
+      <div className="grid grid-cols-12 gap-x-4 gap-y-10 pb-16 md:gap-8 md:pb-28">
         <h2
           data-reveal
           className="display-xl reveal col-span-12 max-w-[14ch] text-[10vw] md:col-span-5 md:text-[3.2vw]"
@@ -38,13 +38,22 @@ export function Clients() {
               <button
                 onMouseEnter={() => setHover(idx)}
                 onMouseLeave={() => setHover(null)}
-                className="hairline group flex w-full items-center justify-between py-4 text-left transition-[padding] duration-500 hover:pl-3 md:py-5"
+                className="group relative block w-full overflow-hidden text-left"
               >
-                <span className="text-[1rem] md:text-[1.05rem]">{c.name}</span>
-                <span className="mono-label flex items-center gap-2 opacity-0 transition-opacity duration-400 group-hover:opacity-100">
-                  View Project
-                  <span className="inline-flex h-3.5 w-3.5 items-center justify-center border border-current text-[8px] leading-none">
-                    +
+                {/* cream sweep band */}
+                <span
+                  aria-hidden
+                  className="absolute inset-0 origin-bottom scale-y-0 bg-[#f6e4d6] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100"
+                />
+                <span className="hairline relative z-10 flex w-full items-center justify-between px-1 py-4 transition-colors duration-300 group-hover:text-[#281503] md:py-5">
+                  <span className="text-[1rem] transition-transform duration-500 group-hover:translate-x-2 md:text-[1.05rem]">
+                    {c.name}
+                  </span>
+                  <span className="mono-label flex items-center gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    View Project
+                    <span className="inline-flex h-3.5 w-3.5 items-center justify-center border border-current text-[8px] leading-none">
+                      +
+                    </span>
                   </span>
                 </span>
               </button>
@@ -56,7 +65,7 @@ export function Clients() {
         {/* Cursor-following preview */}
         <div
           aria-hidden
-          className="pointer-events-none absolute left-0 top-0 z-30 hidden md:block"
+          className="pointer-events-none absolute top-0 left-0 z-30 hidden md:block"
           style={{ transform: `translate3d(${pos.x - 110}px, ${pos.y - 140}px, 0)` }}
         >
           {CLIENTS.map((c, idx) => (

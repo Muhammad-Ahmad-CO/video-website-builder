@@ -37,21 +37,58 @@ export function Archive() {
 
   return (
     <section id="archive" ref={root} className="px-5 py-28 md:px-8 md:py-40">
-      <div className="grid gap-8 pb-16 md:grid-cols-12 md:pb-28">
+      <div className="grid grid-cols-12 gap-x-4 gap-y-8 pb-16 md:gap-8 md:pb-28">
         <h2
           data-reveal
-          className="display-xl reveal col-span-12 text-[12vw] md:col-span-6 md:text-[4vw]"
+          className="display-xl reveal col-span-12 max-w-[12ch] text-[12vw] md:col-span-6 md:text-[4vw]"
         >
-          Archive
+          Past work, lasting pride
         </h2>
         <p
           data-reveal
           data-reveal-delay="100"
           className="reveal col-span-12 max-w-[44ch] self-end text-[0.95rem] leading-relaxed md:col-span-5 md:col-start-8"
         >
-          A selection of earlier work spanning identity, editorial, environments, and product
-          design.
+          Thoughtful design stands the test of time, no matter when or why it was made.
         </p>
+      </div>
+
+      {/* Scattered thumbnails, as in the film's archive teaser */}
+      <div className="relative mb-24 hidden h-[190px] md:block" aria-hidden>
+        <img
+          src={ARCHIVE[4].src}
+          alt=""
+          loading="lazy"
+          data-reveal
+          className="duotone reveal absolute top-2 left-[16%] w-[150px] -rotate-3 object-cover shadow-xl"
+        />
+        <img
+          src={ARCHIVE[1].src}
+          alt=""
+          loading="lazy"
+          data-reveal
+          data-reveal-delay="140"
+          className="duotone reveal absolute top-10 left-[46%] w-[120px] rotate-2 object-cover shadow-xl"
+        />
+        <img
+          src={ARCHIVE[3].src}
+          alt=""
+          loading="lazy"
+          data-reveal
+          data-reveal-delay="260"
+          className="duotone reveal absolute top-0 right-[10%] w-[165px] rotate-[4deg] object-cover shadow-xl"
+        />
+        <a
+          href="#archive"
+          data-reveal
+          data-reveal-delay="320"
+          className="reveal mono-label absolute bottom-0 left-0 inline-flex items-center gap-2 transition-opacity hover:opacity-60"
+        >
+          Explore the Archive
+          <span className="inline-flex h-3.5 w-3.5 items-center justify-center border border-current text-[8px] leading-none">
+            +
+          </span>
+        </a>
       </div>
 
       <div className="space-y-24 md:space-y-40">
